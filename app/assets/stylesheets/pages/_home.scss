@@ -1,1 +1,21 @@
 // Specific CSS for your home-page
+.banner {
+  background-image: linear-gradient(rgba(0,0,0,0.3)), url("https://images.pexels.com/photos/1418358/pexels-photo-1418358.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  h1 {
+    font-size: 50px;
+    color: white;
+    font-family: "Roboto"
+  }
+}
+
+.card-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}

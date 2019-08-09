@@ -1,8 +1,22 @@
-<h1>Best cocktails in town !</h1>
-<div class= "container">
-<p><%= link_to "Add a new cocktail", new_cocktail_path, class: "btn btn-primary" %></p>
-<% @cocktails.each do |c| %>
-<h3><%= link_to "#{c.name}", cocktail_path(c) %></h3>
-<p></p>
-<% end %>
+<div class=banner>
+  <h1>Best cocktails in town !</h1>
+  <%= link_to "Add a new cocktail", new_cocktail_path, class: "btn btn-primary" %>
 </div>
+
+<div class= "container">
+  <div class= "card-list">
+    <% @cocktails.each do |c| %>
+    <div class="card" style="width: 18rem;">
+      <img class="card-img-top" src="..." alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title"><%= c.name %></h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <%= link_to "#{c.name}", cocktail_path(c), class: "btn btn-primary" %>
+      </div>
+    </div>
+    <% end %>
+  </div>
+
+</div>
+
+
